@@ -16,9 +16,9 @@ export default function Home() {
         //localStorage - guardar dado:
         const repositories = response.data;
         const repositoriesName = [];
-        repositories.map((repository) => {
-          repositoriesName.push(repository.name);
-        });
+        repositories.map((repository) => (
+          repositoriesName.push(repository.name)
+        ));
         localStorage.setItem(
           "repositoriesName",
           JSON.stringify(repositoriesName)
@@ -34,19 +34,23 @@ export default function Home() {
 
   return (
     <S.HomeContainer>
-      <S.Content>
+      <S.Card>
+      <S.IconCard className="fab fa-github"></S.IconCard>
+        <S.ContentInfos>
+          <S.TitleCard>GamaGit</S.TitleCard>
+          <S.DescriptionCard>Listagem de Repositórios GitHub</S.DescriptionCard>
+        </S.ContentInfos>     
         <S.Input
           className="usuarioInput"
-          placeholder="Usuário"
+          placeholder="Digite o usuário"
           value={usuario}
           onChange={(e) => setUsuario(e.target.value)}
         />
         <S.Button type="button" onClick={handlePesquisa}>
           Pesquisar
         </S.Button>
-      </S.Content>
-      { erro ? <S.ErrorMsg>Usuário não encontrado!</S.ErrorMsg> : ''}
-      
+      </S.Card>
+      {erro ? <S.ErrorMsg>Usuário não encontrado!</S.ErrorMsg> : ''}
     </S.HomeContainer>
   );
 }

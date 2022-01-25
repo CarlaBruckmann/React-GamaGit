@@ -21,7 +21,7 @@ export default function Repositories() {
       <S.Title>Repositórios:</S.Title>
       <S.List>
         {repositories.map((repository) => {
-          return <S.ListItem>Repositório: {repository}</S.ListItem>;
+          return <S.ListItem key={repository} value={repository}>Repositório: {repository}</S.ListItem>;
         })}
       </S.List>
       <S.LinkHome to='/'>Voltar</S.LinkHome>
