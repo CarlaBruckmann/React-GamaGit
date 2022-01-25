@@ -14,7 +14,7 @@ export default function Repositories() {
       localStorage.clear(); //limpa o localStorage
     } else {
       //se estiver vazio, mandar para Home -> sempre que atualizar a page em repositorios, vai mandar pra home
-      history.push("/");
+      history.push("./");
     }
   }, [history]);
   return (
