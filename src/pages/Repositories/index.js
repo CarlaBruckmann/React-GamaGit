@@ -16,7 +16,7 @@ export default function Repositories() {
       //se estiver vazio, mandar para Home -> sempre que atualizar a page em repositorios, vai mandar pra home
       history.push("/");
     }
-  }, []);
+  }, [history]);
   return (
     <S.Container>
       <S.Card>
