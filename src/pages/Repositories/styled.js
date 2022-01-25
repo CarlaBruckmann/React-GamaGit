@@ -24,13 +24,13 @@ export const Card = styled.div`
 export const Title = styled.h1`
   font-weight: var(--font-medium);
   text-align: center;
-  margin: 10px 0 20px 0;
+  margin-bottom: 20px;
 `;
 export const List = styled.ul`
   list-style: none;
   padding: 0;
   font-weight: var(--font-regular);
-  width: 90%;
+  width: 100%;
 `;
 export const ListItem = styled.li`
   margin: 0.5rem 0;
@@ -42,7 +42,7 @@ export const LinkHome = styled(Link)`
   display: block;
   width: auto;
   text-align: center;
-  margin: 2rem auto;
+  margin-top: 20px;
   background-color: var(--purple);
   padding: 10px 15px;
   border-radius: 10px;
